@@ -9,8 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-touch-auth.git",
-    "baseUrl": "https://github.com/github_account/react-native-touch-auth"
+    "url": "git+https://github.com/sumitbalyan/react-native-touch-auth.git",
+    "baseUrl": "https://github.com/sumitbalyan/react-native-touch-auth"
   },
   "keywords": [
     "react-native"
