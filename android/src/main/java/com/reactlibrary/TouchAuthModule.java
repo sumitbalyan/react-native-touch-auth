@@ -49,27 +49,27 @@ public class TouchAuthModule extends ReactContextBaseJavaModule {
     public TouchAuthModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
-        reactContext.addLifecycleEventListener(this);
+       // reactContext.addLifecycleEventListener(this);
     }
    
     @Override
     public String getName() {
         return "TouchAuth";
     }
-    @Override
-    public void onHostResume() {
-        biometricPrompt = null;
-    }
+    // @Override
+    // public void onHostResume() {
+    //     biometricPrompt = null;
+    // }
     
-    @Override
-    public void onHostPause() {
-        biometricPrompt = null;
-    }
+    // @Override
+    // public void onHostPause() {
+    //     biometricPrompt = null;
+    // }
     
-    @Override
-    public void onHostDestroy() {
-        biometricPrompt = null;
-    }
+    // @Override
+    // public void onHostDestroy() {
+    //     biometricPrompt = null;
+    // }
     @ReactMethod
     public void auth(Callback success, Callback error) {
         succesCallback = success;
