@@ -74,9 +74,9 @@ public class TouchAuthModule extends ReactContextBaseJavaModule {
     public void auth(Callback success, Callback error) {
         succesCallback = success;
         errorCallback = error;
-        final boolean check = BiometricUtils.isBiometricAvailable(this);
+        final boolean check = BiometricUtils.isBiometricAvailable(this.reactContext);
         if (check && biometricPrompt == null) {
-            biometricPrompt = new BiometricPrompt(this, executor, callback);
+            biometricPrompt = new BiometricPrompt(this.reactContext, executor, callback);
             PromptInfo promptInfo = buildBiometricPrompt();
             biometricPrompt.authenticate(promptInfo);
         }
@@ -91,6 +91,6 @@ public class TouchAuthModule extends ReactContextBaseJavaModule {
                 .build();
     }
     private void toast(String text) {
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.reactContext, text, Toast.LENGTH_SHORT).show();
     }
 }
